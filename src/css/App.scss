@@ -1,0 +1,44 @@
+@import './_normalize.scss';
+@import './_variables.scss';
+@import './_grid.scss';
+@import './_addItemForm.scss';
+@import './_order.scss';
+
+body {
+  font: 100 1em/150% "proxima-nova", Helvetica, sans-serif;
+  // font: Helvetica, sans-serif;
+  background-color: #FFFFFF;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+#app-header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  background-color: $primary-color;
+  color: white;
+  border-bottom: 2px solid #ececec;
+}
+
+.content {
+  margin-bottom: 1em;
+  border: 3px solid $primary-color;
+  background-color: #FFFFFF;
+  &-inner {
+    padding: 20px;
+  }
+  &-header {
+    background-color: $primary-color;
+    & h3 {
+      color: white;
+    }
+  }
+  & h3 {
+    font-weight: 300;
+  }
+}

@@ -1,0 +1,54 @@
+.Grid {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.Grid-cell {
+  flex: 1;
+}
+
+.Grid--gutters {
+  margin-left: -$gutter;
+  .Grid-cell {
+    padding-left: $gutter;
+  }
+  .Grid--nested {
+    .Grid-cell:first-of-type {
+      .content {
+        margin-right: 1em;
+      }
+    }
+  }
+}
+
+.Grid-Main {
+  .aside, .main {
+    flex: 1 100%;
+  }
+}
+
+.Grid--full > .Grid-cell {
+  flex: 0 0 100%;
+}
+
+/* Tablet (medium) screens */
+@media (min-width: 30em) {
+  .Grid-Main {
+    .aside {
+      flex: 1 calc(25% - #{$gutter});
+    }
+  }
+}
+
+/* Large screens */
+@media (min-width: 48em) {
+  .Grid-Main {
+    .main {
+      flex: 2; order: 1;
+    }
+    .aside {
+      flex: 1;
+      order: 2;
+    }
+  }
+}
